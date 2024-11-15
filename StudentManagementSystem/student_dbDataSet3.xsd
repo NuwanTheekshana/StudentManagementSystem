@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="student_dbDataSet3" targetNamespace="http://tempuri.org/student_dbDataSet3.xsd" xmlns:mstns="http://tempuri.org/student_dbDataSet3.xsd" xmlns="http://tempuri.org/student_dbDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="student_dbConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="student_dbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.StudentManagementSystem.Properties.Settings.GlobalReference.Default.student_dbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="enrollment_data_vmTableAdapter" GeneratorDataComponentClassName="enrollment_data_vmTableAdapter" Name="enrollment_data_vm" UserDataComponentName="enrollment_data_vmTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="student_dbConnectionString (Settings)" DbObjectName="student_db.dbo.enrollment_data_vm" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT enrollment_id, course_name, first_name, last_name FROM dbo.enrollment_data_vm</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="enrollment_id" DataSetColumn="enrollment_id" />
+              <Mapping SourceColumn="course_name" DataSetColumn="course_name" />
+              <Mapping SourceColumn="first_name" DataSetColumn="first_name" />
+              <Mapping SourceColumn="last_name" DataSetColumn="last_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="student_dbDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="student_dbDataSet3" msprop:Generator_DataSetName="student_dbDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="enrollment_data_vm" msprop:Generator_RowEvHandlerName="enrollment_data_vmRowChangeEventHandler" msprop:Generator_RowDeletedName="enrollment_data_vmRowDeleted" msprop:Generator_RowDeletingName="enrollment_data_vmRowDeleting" msprop:Generator_RowEvArgName="enrollment_data_vmRowChangeEvent" msprop:Generator_TablePropName="enrollment_data_vm" msprop:Generator_RowChangedName="enrollment_data_vmRowChanged" msprop:Generator_RowChangingName="enrollment_data_vmRowChanging" msprop:Generator_TableClassName="enrollment_data_vmDataTable" msprop:Generator_RowClassName="enrollment_data_vmRow" msprop:Generator_TableVarName="tableenrollment_data_vm" msprop:Generator_UserTableName="enrollment_data_vm">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="enrollment_id" msprop:Generator_ColumnPropNameInRow="enrollment_id" msprop:Generator_ColumnPropNameInTable="enrollment_idColumn" msprop:Generator_ColumnVarNameInTable="columnenrollment_id" msprop:Generator_UserColumnName="enrollment_id" type="xs:int" />
+              <xs:element name="course_name" msprop:Generator_ColumnPropNameInRow="course_name" msprop:Generator_ColumnPropNameInTable="course_nameColumn" msprop:Generator_ColumnVarNameInTable="columncourse_name" msprop:Generator_UserColumnName="course_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="first_name" msprop:Generator_ColumnPropNameInRow="first_name" msprop:Generator_ColumnPropNameInTable="first_nameColumn" msprop:Generator_ColumnVarNameInTable="columnfirst_name" msprop:Generator_UserColumnName="first_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="last_name" msprop:Generator_ColumnPropNameInRow="last_name" msprop:Generator_ColumnPropNameInTable="last_nameColumn" msprop:Generator_ColumnVarNameInTable="columnlast_name" msprop:Generator_UserColumnName="last_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:enrollment_data_vm" />
+      <xs:field xpath="mstns:enrollment_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
